@@ -28,7 +28,8 @@ Pod::Spec.new do |s|
       webrtc.public_header_files = 'QIMGeneralModule/WebRTC/**/*.{h}' 'QIMGeneralModule/WebRTC/RTC/**/*.{h}'
       webrtc.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'QIMWebRTCEnable=1'}
       webrtc.frameworks = 'VideoToolbox', 'GLKit', 'CoreTelephony', 'AVFoundation', 'UIKit', 'Foundation'
-      webrtc.dependency 'SocketRocket'
+      #webrtc.dependency 'SocketRocket'
+      webrtc.dependency 'SocketCraft'
       # 目前WebRTC支持iOS9的最高版本是1.1.26989
       webrtc.dependency 'GoogleWebRTC', '1.1.26989'
       webrtc.libraries = 'stdc++', 'bz2', 'resolv'
