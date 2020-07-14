@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RTLabel"
-  s.version      = "1.0"
+  s.version      = "1.0.1+1"
   s.summary      = "RTLabel"
   s.description  = <<-DESC
   RTLabel
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.author       = { "Alexey Khokhlov" => "alexeyxo@gmail.com" }
   s.authors      = { "Alexey Khokhlov" => "alexeyxo@gmail.com" }
   s.source       = {
-    :git => "https://github.com/honcheng/RTLabel.git", :tag => s.version
+    :git => "https://github.com/honcheng/RTLabel.git"
   }
   s.module_name = "RTLabel"
   s.source_files = 'RTLabelProject/Classes/*.{h,m}'
