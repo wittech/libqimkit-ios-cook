@@ -210,26 +210,26 @@ Pod::Spec.new do |s|
 
   end
   
-#   s.subspec 'QIMUIKit-FULL' do |full|
-# #    full.resource = ['QIMUIKit/QIMUIKitResources/片段/*', 'QIMUIKit/Application/ViewController/Login/QIMLoginViewController.xib', 'QIMUIKit/QIMUIKitResources/Audio/*', 'QIMUIKit/QIMUIKitResources/Certificate/*', 'QIMUIKit/QIMUIKitResources/Fonts/*', 'QIMUIKit/QIMUIKitResources/Stickers/*', 'QIMUIKit/QIMUIKitResources/QIMI18N.bundle', 'QIMRNKit/QIMRNKit.bundle', 'QIMUIKit/QIMUIKitResources/QIMUIKit.bundle']
-#     full.resources = "QIMUIKit/QIMUIKitResources/片段/*", "QIMUIKit/Application/ViewController/Login/QIMLoginViewController.xib", "QIMUIKit/QIMUIKitResources/Audio/*", "QIMUIKit/QIMUIKitResources/Certificate/*", "QIMUIKit/QIMUIKitResources/Fonts/*", "QIMUIKit/QIMUIKitResources/Stickers/*", "QIMUIKit/QIMUIKitResources/QIMI18N.bundle", "QIMRNKit/QIMRNKit.bundle", "QIMUIKit/QIMUIKitResources/QIMUIKit.bundle"
-#     full.dependency 'QIMUIKit/PublicUIHeader'
-#     full.dependency 'QIMUIKit/QIMAppUIConfig'
-#     full.dependency 'QIMUIKit/QIMUISDK'
-#     full.dependency 'QIMUIKit/QIMAppUI'
-#     full.dependency 'QIMUIKit/QIMGeneralUI'
-#     full.dependency 'QIMUIKit/QIMMeUI'
-#     full.dependency 'QIMUIKit/QIMCells'
-#     full.dependency 'QIMUIKit/ImagePicker'
-#     full.dependency 'QIMUIKit/QIMMWPhotoBrowser'
-#     full.dependency 'QIMUIKit/SDWebImageWebPCoder'
-#     full.dependency 'QIMUIKit/QIMSuperPlayer'
-#     full.dependency 'QIMUIKit/QIMUIVendorKit'
-#     full.dependency 'QIMUIKit/QIMNote'
-#     full.dependency 'QIMUIKit/QIMRN'
-#     full.dependency 'QIMUIKit/QIMFlutter'
+  s.subspec 'QIMUIKit-FULL' do |full|
+#    full.resource = ['QIMUIKit/QIMUIKitResources/片段/*', 'QIMUIKit/Application/ViewController/Login/QIMLoginViewController.xib', 'QIMUIKit/QIMUIKitResources/Audio/*', 'QIMUIKit/QIMUIKitResources/Certificate/*', 'QIMUIKit/QIMUIKitResources/Fonts/*', 'QIMUIKit/QIMUIKitResources/Stickers/*', 'QIMUIKit/QIMUIKitResources/QIMI18N.bundle', 'QIMRNKit/QIMRNKit.bundle', 'QIMUIKit/QIMUIKitResources/QIMUIKit.bundle']
+    full.resources = "QIMUIKit/QIMUIKitResources/片段/*", "QIMUIKit/Application/ViewController/Login/QIMLoginViewController.xib", "QIMUIKit/QIMUIKitResources/Audio/*", "QIMUIKit/QIMUIKitResources/Certificate/*", "QIMUIKit/QIMUIKitResources/Fonts/*", "QIMUIKit/QIMUIKitResources/Stickers/*", "QIMUIKit/QIMUIKitResources/QIMI18N.bundle", "QIMRNKit/QIMRNKit.bundle", "QIMUIKit/QIMUIKitResources/QIMUIKit.bundle"
+    full.dependency 'QIMUIKit/PublicUIHeader'
+    full.dependency 'QIMUIKit/QIMAppUIConfig'
+    full.dependency 'QIMUIKit/QIMUISDK'
+    full.dependency 'QIMUIKit/QIMAppUI'
+    full.dependency 'QIMUIKit/QIMGeneralUI'
+    full.dependency 'QIMUIKit/QIMMeUI'
+    full.dependency 'QIMUIKit/QIMCells'
+    full.dependency 'QIMUIKit/ImagePicker'
+    full.dependency 'QIMUIKit/QIMMWPhotoBrowser'
+    full.dependency 'QIMUIKit/SDWebImageWebPCoder'
+    full.dependency 'QIMUIKit/QIMSuperPlayer'
+    full.dependency 'QIMUIKit/QIMUIVendorKit'
+    full.dependency 'QIMUIKit/QIMNote'
+    # full.dependency 'QIMUIKit/QIMRN'
+    # full.dependency 'QIMUIKit/QIMFlutter'
 
-#   end
+  end
   
   s.dependency 'MJRefresh'
   s.dependency 'YLGIFImage'
@@ -260,12 +260,12 @@ Pod::Spec.new do |s|
   if $debug
     puts 'debug QIMUIKit'
   else
-    puts '线上release QIMUIKit2'
-    s.dependency 'QIMCommon', '~> 4.0'
-    s.dependency 'QIMGeneralModule', '~> 4.0'
+    puts '线上release QIMUIKit-new'
+    s.dependency 'QIMCommon'
+    s.dependency 'QIMGeneralModule'
   end
 
-  s.default_subspec = 'QIMUIKit-NORN'
+  s.default_subspec = 'QIMUIKit-FULL'
   s.frameworks = 'UIKit','MessageUI', 'Foundation', 'JavaScriptCore', 'AVFoundation', 'OpenGLES', 'MobileCoreServices', 'AssetsLibrary', 'QuartzCore', 'CoreMotion', 'CoreText'
   s.libraries = 'stdc++', 'bz2', 'resolv', 'icucore', 'xml2'
 
