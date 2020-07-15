@@ -108,7 +108,7 @@ Pod::Spec.new do |s|
       'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) SD_WEBP=1',
       'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
     }
-    sdwebp.dependency 'SDWebImage/Core'
+    sdwebp.dependency 'SDWebImage'
 
   end
 
