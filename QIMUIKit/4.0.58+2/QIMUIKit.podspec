@@ -176,19 +176,19 @@ Pod::Spec.new do |s|
   #    end
   # end
   
-  s.subspec 'QIMFlutter' do |flutter|
+#   s.subspec 'QIMFlutter' do |flutter|
     
-    flutter.source_files = ['QIMFlutter/Src/**/*{h,m,c}']
-    #    flutter.xcconfig = {"FRAMEWORK_SEARCH_PATHS" => "\"${PODS_ROOT}/../flutter_service/.ios/Flutter/engine\""}
-    if $debug
-#      flutter.xcconfig = {"FRAMEWORK_SEARCH_PATHS" => "\"${PODS_ROOT}/../libQIMFlutterLibrary/libQIMFlutterFramework/\""}
-    elsif $internal
-      flutter.dependency 'QIMFlutterFramework', '~> 4.0'
-      flutter.xcconfig = {"HEADER_SEARCH_PATHS" => "\"${PODS_ROOT}/Headers/Private/**\" \"$(PODS_ROOT)/QIMFlutterFramework\""}
-    else
+#     flutter.source_files = ['QIMFlutter/Src/**/*{h,m,c}']
+#     #    flutter.xcconfig = {"FRAMEWORK_SEARCH_PATHS" => "\"${PODS_ROOT}/../flutter_service/.ios/Flutter/engine\""}
+#     if $debug
+# #      flutter.xcconfig = {"FRAMEWORK_SEARCH_PATHS" => "\"${PODS_ROOT}/../libQIMFlutterLibrary/libQIMFlutterFramework/\""}
+#     elsif $internal
+#       flutter.dependency 'QIMFlutterFramework', '~> 4.0'
+#       flutter.xcconfig = {"HEADER_SEARCH_PATHS" => "\"${PODS_ROOT}/Headers/Private/**\" \"$(PODS_ROOT)/QIMFlutterFramework\""}
+#     else
 
-    end    
-  end
+#     end    
+#   end
   
   s.subspec 'QIMUIKit-NORN' do |norn|
 #    norn.resource = ['QIMUIKit/QIMUIKitResources/片段/*', 'QIMUIKit/Application/ViewController/Login/QIMLoginViewController.xib', 'QIMUIKit/QIMUIKitResources/Audio/*', 'QIMUIKit/QIMUIKitResources/Certificate/*', 'QIMUIKit/QIMUIKitResources/Fonts/*', 'QIMUIKit/QIMUIKitResources/Stickers/*', 'QIMUIKit/QIMUIKitResources/QIMI18N.bundle', 'QIMUIKit/QIMUIKitResources/QIMUIKit.bundle']
@@ -206,7 +206,7 @@ Pod::Spec.new do |s|
     norn.dependency 'QIMUIKit/QIMSuperPlayer'
     norn.dependency 'QIMUIKit/QIMUIVendorKit'
     norn.dependency 'QIMUIKit/QIMNote'
-    norn.dependency 'QIMUIKit/QIMFlutter'
+    # norn.dependency 'QIMUIKit/QIMFlutter'
 
   end
   
