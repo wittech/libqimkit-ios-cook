@@ -260,7 +260,7 @@ Pod::Spec.new do |s|
   if $debug
     puts 'debug QIMUIKit'
   else
-    puts '线上release QIMUIKit'
+    puts '线上release QIMUIKit2'
     s.dependency 'QIMCommon', '~> 4.0'
     s.dependency 'QIMGeneralModule', '~> 4.0'
   end
