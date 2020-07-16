@@ -266,6 +266,7 @@ Pod::Spec.new do |s|
   s.dependency 'YYKeyboardManager'
   s.dependency 'RTLabel'
   s.dependency 'AlipaySDK'
+  s.dependency 'TXLiteAVSDK_Player'
 
   if $debug
     puts 'debug QIMUIKit'
