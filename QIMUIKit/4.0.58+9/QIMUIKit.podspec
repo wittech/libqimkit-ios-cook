@@ -57,7 +57,7 @@ Pod::Spec.new do |s|
   s.subspec 'QIMGeneralUI' do |generalUI|
     generalUI.public_header_files = "QIMUIKit/General/**/*.{h}"
     generalUI.source_files = "QIMUIKit/General/**/*.{h,m,c,mm}"
-    generalUI.exclude_files = "QIMUIKit/General/Verders/SDWebImageWebPCoder/Classes/**/*{h,m}", "QIMUIKit/General/Verders/QIMMWPhotoBrowser/**/*{h,m}"
+    generalUI.exclude_files = "QIMUIKit/General/Verders/QIMMWPhotoBrowser/**/*{h,m}"
     generalUI.dependency 'QIMUIKit/PublicUIHeader'
     generalUI.dependency 'QIMUIKit/QIMAppUIConfig'
   end
@@ -103,7 +103,7 @@ Pod::Spec.new do |s|
       # SDWebImage
       # 3.7.2 contains bugs downloading local files
       # https://github.com/rs/SDWebImage/issues/1109
-      photoBrowser.dependency 'SDWebImage'
+      photoBrowser.dependency 'APWebImage'
 #      photoBrowser.dependency 'SDWebImageWebPCoder'
       photoBrowser.dependency 'QIMUIKit/PublicUIHeader'
       #增加依赖
@@ -111,16 +111,16 @@ Pod::Spec.new do |s|
       photoBrowser.resource = ['QIMUIKit/General/Verders/QIMMWPhotoBrowser/Assets']
   end
 
-  s.subspec 'SDWebImageWebPCoder' do |sdwebp|
+  # s.subspec 'SDWebImageWebPCoder' do |sdwebp|
 
-    sdwebp.source_files = ['QIMUIKit/General/Verders/SDWebImageWebPCoder/Classes/**/*{h,m}']
-    sdwebp.xcconfig = {
-      'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) SD_WEBP=1',
-      'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
-    }
-    sdwebp.dependency 'SDWebImage'
+  #   sdwebp.source_files = ['QIMUIKit/General/Verders/SDWebImageWebPCoder/Classes/**/*{h,m}']
+  #   sdwebp.xcconfig = {
+  #     'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) SD_WEBP=1',
+  #     'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src'
+  #   }
+  #   sdwebp.dependency 'SDWebImage'
 
-  end
+  # end
 
   # s.subspec 'QIMSuperPlayer' do |player|
 
@@ -212,7 +212,7 @@ Pod::Spec.new do |s|
     norn.dependency 'QIMUIKit/QIMCells'
     norn.dependency 'QIMUIKit/ImagePicker'
     norn.dependency 'QIMUIKit/QIMMWPhotoBrowser'
-    norn.dependency 'QIMUIKit/SDWebImageWebPCoder'
+    # norn.dependency 'QIMUIKit/SDWebImageWebPCoder'
     # norn.dependency 'QIMUIKit/QIMSuperPlayer'
     norn.dependency 'QIMUIKit/QIMUIVendorKit'
     norn.dependency 'QIMUIKit/QIMNote'
@@ -234,7 +234,7 @@ Pod::Spec.new do |s|
     full.dependency 'QIMUIKit/QIMCells'
     full.dependency 'QIMUIKit/ImagePicker'
     full.dependency 'QIMUIKit/QIMMWPhotoBrowser'
-    full.dependency 'QIMUIKit/SDWebImageWebPCoder'
+    # full.dependency 'QIMUIKit/SDWebImageWebPCoder'
     # full.dependency 'QIMUIKit/QIMSuperPlayer'
     full.dependency 'QIMUIKit/QIMUIVendorKit'
     full.dependency 'QIMUIKit/QIMNote'
@@ -266,7 +266,6 @@ Pod::Spec.new do |s|
   s.dependency 'YYKeyboardManager'
   s.dependency 'RTLabel'
   s.dependency 'AlipaySDK'
-  s.dependency 'SuperPlayer'
 
   if $debug
     puts 'debug QIMUIKit'
