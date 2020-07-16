@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "QIMUIKit"
-  s.version      = "4.0.58+6"
+  s.version      = "4.0.58+7"
   s.summary      = "QIM App UI 9.0+ version"
   s.description  = <<-DESC
                    QIM UI
@@ -57,7 +57,7 @@ Pod::Spec.new do |s|
   s.subspec 'QIMGeneralUI' do |generalUI|
     generalUI.public_header_files = "QIMUIKit/General/**/*.{h}"
     generalUI.source_files = "QIMUIKit/General/**/*.{h,m,c,mm}"
-    generalUI.exclude_files = "QIMUIKit/General/Verders/SDWebImageWebPCoder/Classes/**/*{h,m}", "QIMUIKit/General/Verders/QIMMWPhotoBrowser/**/*{h,m}", "QIMUIKit/General/Verders/QIMSuperPlayer/**/*{h,m}"
+    generalUI.exclude_files = "QIMUIKit/General/Verders/SDWebImageWebPCoder/Classes/**/*{h,m}", "QIMUIKit/General/Verders/QIMMWPhotoBrowser/**/*{h,m}"
     generalUI.dependency 'QIMUIKit/PublicUIHeader'
     generalUI.dependency 'QIMUIKit/QIMAppUIConfig'
   end
@@ -213,7 +213,7 @@ Pod::Spec.new do |s|
     norn.dependency 'QIMUIKit/ImagePicker'
     norn.dependency 'QIMUIKit/QIMMWPhotoBrowser'
     norn.dependency 'QIMUIKit/SDWebImageWebPCoder'
-    norn.dependency 'QIMUIKit/QIMSuperPlayer'
+    # norn.dependency 'QIMUIKit/QIMSuperPlayer'
     norn.dependency 'QIMUIKit/QIMUIVendorKit'
     norn.dependency 'QIMUIKit/QIMNote'
     # norn.dependency 'QIMUIKit/QIMFlutter'
@@ -235,7 +235,7 @@ Pod::Spec.new do |s|
     full.dependency 'QIMUIKit/ImagePicker'
     full.dependency 'QIMUIKit/QIMMWPhotoBrowser'
     full.dependency 'QIMUIKit/SDWebImageWebPCoder'
-    full.dependency 'QIMUIKit/QIMSuperPlayer'
+    # full.dependency 'QIMUIKit/QIMSuperPlayer'
     full.dependency 'QIMUIKit/QIMUIVendorKit'
     full.dependency 'QIMUIKit/QIMNote'
     # full.dependency 'QIMUIKit/QIMRN'
@@ -265,7 +265,6 @@ Pod::Spec.new do |s|
   s.dependency 'Toast'
   s.dependency 'YYKeyboardManager'
   s.dependency 'RTLabel'
-  s.dependency 'MMLayout'
   s.dependency 'AlipaySDK'
   s.dependency 'SuperPlayer'
 
