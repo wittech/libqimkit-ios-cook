@@ -109,7 +109,7 @@ Pod::Spec.new do |s|
   s.dependency 'SCLAlertView-Objective-C'
   s.dependency 'Masonry'
   #todo:增加依赖项目
-  s.dependency 'APWebImage'
+  s.dependency 'SDWebImage', '~> 1.0.0.200404155527'
 
   s.frameworks = 'Foundation', 'UIKit', 'AVFoundation', 'CoreTelephony'
 
