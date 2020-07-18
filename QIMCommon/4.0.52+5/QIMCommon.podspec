@@ -19,10 +19,16 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "9.0"
   
+  s.subspec 'QIMProtocolBuffers' do |pbuf|
+    # pbuf.public_header_files = "QIMCommon/ProtocolBuffers/src/runtime/**/*.{h}"
+    pbuf.source_files = 'QIMCommon/ProtocolBuffers/src/runtime/**/*.{h,m,c}'
+  end
+
   s.subspec 'QIMPrivatePBCommon' do |pbcommon|
     pbcommon.source_files = 'QIMCommon/QIMPrivatePBCommonFramework/Headers/**/*.{h,m,c}'
     pbcommon.vendored_libraries = ['QIMCommon/QIMPrivatePBCommonFramework/Frameworks/libQIMPrivatePBCommon.a']
     pbcommon.pod_target_xcconfig = {"HEADER_SEARCH_PATHS" => "\"${PODS_ROOT}/Headers/Private/**\" \"${PODS_ROOT}/Headers/Private/QIMCommon/**\" \"${PODS_ROOT}/Headers/Public/QIMCommon/**\" \"${PODS_ROOT}/Headers/Public/QIMCommon/**\""}
+    pbcommon.dependency 'QIMCommon/QIMProtocolBuffers'
   end
 
   s.subspec 'Base' do |base|
