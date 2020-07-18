@@ -257,15 +257,14 @@ Pod::Spec.new do |s|
   # s.dependency 'AMap3DMap'
   s.dependency 'SCLAlertView-Objective-C'
   # 修复地图依赖
-  # s.dependency 'AMapFoundationKit'
-  # s.dependency 'MAMapKit'
-  # s.dependency 'AMapSearchKit'
-  # s.dependency 'APMap'
-  # s.dependency 'AntUI'
+  s.dependency 'AMapFoundationKit'
+  s.dependency 'MAMapKit'
+  s.dependency 'AMapSearchKit'
+  s.dependency 'APMap'
   s.dependency 'Toast'
   s.dependency 'YYKeyboardManager'
   s.dependency 'RTLabel'
-  # s.dependency 'AlipaySDK'
+  s.dependency 'AlipaySDK'
   s.dependency 'TXLiteAVSDK_Player'
 
   if $debug
