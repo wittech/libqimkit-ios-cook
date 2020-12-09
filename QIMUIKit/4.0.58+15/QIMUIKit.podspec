@@ -257,7 +257,7 @@ Pod::Spec.new do |s|
   s.dependency 'SCLAlertView-Objective-C'
   # 修复地图依赖
   s.dependency 'AMapFoundationKit'
-  s.dependency 'MAMapKit'
+  s.dependency 'APMobileLBS'
   s.dependency 'AMapSearchKit'
   s.dependency 'APMap'
   s.dependency 'Toast'
