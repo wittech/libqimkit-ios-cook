@@ -1,0 +1,51 @@
+ios卡死日志
+
+2021-01-10 20:04:18.146842+0800 [11051:2720479] [mPaaSLog] APMobileNetwork rpc timeoutConfig：20.000000
+2021-01-10 20:04:18.147101+0800 [11051:2720601] [mPaaSLog] TinyAppPerf : onTinyAppStart prepare finish : 2020200000000103, detail : appId=2020200000000103^version=1.0.12.0^proc=all_0^req=0^off=1^page=0^err=^errc=1^nbu=
+2021-01-10 20:04:18.147296+0800 [11051:2718702] [mPaaSLog] APMobileNetwork Rpc sign string:
+Operation-Type=alipay.client.getUnionResource&Request-Data=CAESHU9ORVhENkUwQjEzMzEyMzMxX0lPUy1kZWZhdWx0GgcxLjAuMC4wIgcxLjAuMC4wKhhYemxGNkdFb1loTURBQzA2K0ZuRnBUL0cyGFh6bEY2R0VvWWhNREFDMDYrRm5GcFQvRzoFYXBwbGVCCGlQaG9uZSBYYgQxMy42agNMVEV6LAgEMgwKCDc3Nzc3Nzc3EgAyDAoINjg2ODcyMDkSADIMCggyMDAwMDIwMhIAggEAigEFYXJtNjQ=&Ts=NRiBifZ
+2021-01-10 20:04:18.147487+0800 [11051:2718702] [mPaaSLog] APMobileNetwork request.allHTTPHeaderFields2:{
+	Content-Type = application/protobuf,
+	AppId = ONEXD6E0B13312331,
+	productId = ONEXD6E0B13312331_IOS,
+	WorkspaceId = default,
+	Version = 2,
+	productVersion = 10.1.68.150810110000,
+	Operation-Type = alipay.client.getUnionResource,
+	Platform = IOS,
+	UniformGateway = https://cn-hangzhou-component-gw.cloud.alipay.com/mgw.htm,
+	Did = XzlF6GEoYhMDAC06+FnFpT/G,
+	Ts = NRiBifZ,
+	Sign = 2d3f56c1aa4335d987f9f148bb19d431
+},url:https://cn-hangzhou-component-gw.cloud.alipay.com/mgw.htm
+2021-01-10 20:04:18.147661+0800 [11051:2718583] [mPaaSLog] NATypeFinder : type:H5App
+
+网上说的解决方案
+https://www.cnblogs.com/xiongqiangcs/p/3357050.html
+
+(11051,0x16e187000) malloc: *** error for object 0x148db8000: pointer being freed was not allocated
+(11051,0x16e187000) malloc: *** set a breakpoint in malloc_error_break to debug
+2021-01-10 20:07:19.626834+0800 [11051:2718583] [RavenDB] Abnormal lock: Default. Cost: 181472.175002 ms.
+2021-01-10 20:07:19.627386+0800 [11051:2718583] [mPaaSLog] RavenDB : Abnormal lock: Default. Cost: 181472.175002 ms.
+2021-01-10 20:07:19.630016+0800 [11051:2720399] [mPaaSLog] #THM : APTMainACall-0,-[H5MainLinkNode scheduleExpectation]_block_invoke,0.000000,0
+2021-01-10 20:07:19.631636+0800 [11051:2721535] XPC connection interrupted
+2021-01-10 20:07:19.633975+0800 [11051:2718583] [mPaaSLog] enableCheckEntrance : switch=no^enable=0
+2021-01-10 20:07:19.634190+0800 [11051:2718583] [mPaaSLog] APMobileRuntime : startApplication begin DFMicroApplication: 2020200000000103 (<DTMicroApplicationDescriptor: 0x281eb97e0>)
+2021-01-10 20:07:19.638875+0800 [11051:2718646] [mPaaSLog] TYMemoryMonitor : checkCurrentMemory: virtualMemory=5524.546875^currentProcessMemory=154^systemMemoryLevel=21^physFootprint=353.6737365722656^residentMemory=153.375^freeMemory=71
+2021-01-10 20:07:19.638881+0800 [11051:2718645] [mPaaSLog] [POWER-LOG] : Power Result : 1
+2021-01-10 20:07:19.639411+0800 [11051:2718583] [mPaaSLog] APMobileRuntime : applicationWillResignActive
+2021-01-10 20:07:19.640109+0800 [11051:2718583] [mPaaSLog] APMonitor : enter deactive block
+2021-01-10 20:07:19.640134+0800 [11051:2721543] Sunday, January 10, 2021 at 8:07:19 PM China Standard Time 【Thread-2718583】 -[DTFrameworkInterface(Portal) applicationWillResignActive:] : 应用程序将要入非活动状态执行,applicationWillResignActive
+2021-01-10 20:07:19.641045+0800 [11051:2718641] [mPaaSLog] APLonglinkService Heart Time:209.269562
+2021-01-10 20:07:19.641238+0800 [11051:2718641] [mPaaSLog] APLonglinkService writeData:15 isConnected:connected, 100, isSpdy:0
+2021-01-10 20:07:19.650364+0800 [11051:2718641] [mPaaSLog] APLonglinkService LL writeData:<AsyncSocket 0x282370600 local 10.166.95.151 49555 remote 47.110.229.127 443 has queued 0 reads 0 writes, currently read 256 bytes (0% done), no current write, read stream 0x282d613b0 at end, write stream 0x282d61680 open, not connected>,0,20,100
+2021-01-10 20:07:19.653751+0800 [11051:2718641] [Sync] LL clearAsyncSocketLockAndTimer
+2021-01-10 20:07:19.653837+0800 [11051:2718641] [Sync] LL connectToHost=mpaas-mss.aliyuncs.com port:443
+2021-01-10 20:07:19.653898+0800 [11051:2718641] [mPaaSLog] APLongLinkService : LL connectToHost=mpaas-mss.aliyuncs.com httpDNS IP:mpaas-mss.aliyuncs.com port:443,useDNS:0
+2021-01-10 20:07:35.235247+0800 [11051:2718614] [mPaaSLog] [APCrashReporter]  : DEADLOCK in main thread
+2021-01-10 20:07:35.235247+0800 [11051:2718641] [mPaaSLog] APLonglinkService LL Heart time out.
+2021-01-10 20:08:23.692339+0800 [11051:2718641] [mPaaSLog] APLongLinkService : SL EXP_LL,1610280458017,Error Domain=AsyncSocketErrorDomain Code=4 "Heartbeat time out" UserInfo={NSLocalizedDescription=Heartbeat time out},2
+2021-01-10 20:12:35.531694+0800 [11051:2718645] [mPaaSLog] [POWER-LOG] : Power Result : 0
+2021-01-10 20:12:35.531471+0800 [11051:2718641] [Sync] LL onSocket:willDisconnectWithError:err Error Domain=AsyncSocketErrorDomain Code=2 "Attempt to connect to host timed out" UserInfo={NSLocalizedDescription=Attempt to connect to host timed out}
+Printing description of anObject->_content:
+[mPaaSLog] APMobilenetwork start AMRPC:alipay.client.getUnionResource

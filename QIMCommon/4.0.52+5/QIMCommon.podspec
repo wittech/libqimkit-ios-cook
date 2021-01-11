@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   s.dependency 'WCDB'
 
   # 增加SDImageCache支持
-  s.dependency 'SDWebImage', '~> 1.0.0.200404155527'
+  s.dependency 'SDWebImage'
 
   s.frameworks = 'Foundation', 'CoreTelephony', 'SystemConfiguration', 'AudioToolbox', 'AVFoundation', 'UserNotifications', 'CoreTelephony','QuartzCore', 'CoreGraphics', 'Security'
   s.libraries = 'stdc++','bz2'
