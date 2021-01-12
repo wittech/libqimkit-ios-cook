@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "QIMUIKit"
-  s.version      = "4.0.58+17"
+  s.version      = "4.0.58+18"
   s.summary      = "QIM App UI 9.0+ version"
   s.description  = <<-DESC
                    QIM UI
@@ -255,7 +255,6 @@ Pod::Spec.new do |s|
   s.dependency 'AMapLocation-NO-IDFA'
   s.dependency 'AMap3DMap-NO-IDFA'
   s.dependency 'SCLAlertView-Objective-C'
-  # 修复地图依赖
   s.dependency 'Toast'
   s.dependency 'YYKeyboardManager'
   s.dependency 'RTLabel'
