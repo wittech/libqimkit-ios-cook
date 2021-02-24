@@ -38,14 +38,15 @@ Pod::Spec.new do |s|
     audio.dependency 'QIMKitVendor/PublicRedefineHeader'
   end
   
-  s.subspec 'ZBar' do |zbar|
-      zbar.source_files = 'QIMKitVendor/QIMZBarSDK/Headers/ZBarSDK/*.{h,m,c}', 'QIMKitVendor/QIMZBarSDK/libqrencode/**/*.{h,m,c}'
-      zbar.vendored_libraries = ['QIMKitVendor/QIMZBarSDK/libzbar.a']
-      zbar.pod_target_xcconfig = {"HEADER_SEARCH_PATHS" => "\"${PODS_ROOT}/Headers/Private/**\" \"${PODS_ROOT}/Headers/Private/QIMKitVendor/**\" \"${PODS_ROOT}/Headers/Public/QIMKitVendor/**\" \"${PODS_ROOT}/Headers/Public/QIMKitVendor/**\""}
-      zbar.frameworks = 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'CoreVideo', 'QuartzCore'
-      zbar.libraries = 'iconv'
-      zbar.dependency 'QIMKitVendor/PublicRedefineHeader'
-  end
+  # 移除二维码扫码组件，用不着
+  # s.subspec 'ZBar' do |zbar|
+  #     zbar.source_files = 'QIMKitVendor/QIMZBarSDK/Headers/ZBarSDK/*.{h,m,c}', 'QIMKitVendor/QIMZBarSDK/libqrencode/**/*.{h,m,c}'
+  #     zbar.vendored_libraries = ['QIMKitVendor/QIMZBarSDK/libzbar.a']
+  #     zbar.pod_target_xcconfig = {"HEADER_SEARCH_PATHS" => "\"${PODS_ROOT}/Headers/Private/**\" \"${PODS_ROOT}/Headers/Private/QIMKitVendor/**\" \"${PODS_ROOT}/Headers/Public/QIMKitVendor/**\" \"${PODS_ROOT}/Headers/Public/QIMKitVendor/**\""}
+  #     zbar.frameworks = 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'CoreVideo', 'QuartzCore'
+  #     zbar.libraries = 'iconv'
+  #     zbar.dependency 'QIMKitVendor/PublicRedefineHeader'
+  # end
   
   s.subspec 'Zip' do |zip|
 
