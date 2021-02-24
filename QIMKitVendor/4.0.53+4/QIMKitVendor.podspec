@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'ZBar' do |zbar|
-      zbar.source_files = 'QIMKitVendor/QIMZBarSDK/Headers/ZBarSDK/zbar/*.{h,m,c}', 'QIMKitVendor/QIMZBarSDK/Headers/ZBarSDK/*.{h,m,c}', 'QIMKitVendor/QIMZBarSDK/libqrencode/**/*.{h,m,c}'
+      zbar.source_files = 'QIMKitVendor/QIMZBarSDK/Headers/ZBarSDK/*.{h,m,c}', 'QIMKitVendor/QIMZBarSDK/libqrencode/**/*.{h,m,c}'
       zbar.vendored_libraries = ['QIMKitVendor/QIMZBarSDK/libzbar.a']
       zbar.pod_target_xcconfig = {"HEADER_SEARCH_PATHS" => "\"${PODS_ROOT}/Headers/Private/**\" \"${PODS_ROOT}/Headers/Private/QIMKitVendor/**\" \"${PODS_ROOT}/Headers/Public/QIMKitVendor/**\" \"${PODS_ROOT}/Headers/Public/QIMKitVendor/**\""}
       zbar.frameworks = 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'CoreVideo', 'QuartzCore'
