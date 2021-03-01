@@ -32,40 +32,40 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Base' do |base|
-    $lib = ENV['use_lib']
-    $debug = ENV['debug']
-    if $lib
+    # $lib = ENV['use_lib']
+    # $debug = ENV['debug']
+    # if $lib
       
-      puts '---------QIMCommonSDK二进制-------'
-      base.source_files = 'ios_libs/Headers/**/*.h'
-      base.vendored_libraries = ['ios_libs/Frameworks/libQIMCommon.a']
-      base.pod_target_xcconfig = {"HEADER_SEARCH_PATHS" => "\"${PODS_ROOT}/Headers/Private/**\" \"${PODS_ROOT}/Headers/Private/QIMCommon/**\" \"${PODS_ROOT}/Headers/Public/QIMCommon/**\" \"${PODS_ROOT}/Headers/Public/QIMCommon/**\""}
+    #   puts '---------QIMCommonSDK二进制-------'
+    #   base.source_files = 'ios_libs/Headers/**/*.h'
+    #   base.vendored_libraries = ['ios_libs/Frameworks/libQIMCommon.a']
+    #   base.pod_target_xcconfig = {"HEADER_SEARCH_PATHS" => "\"${PODS_ROOT}/Headers/Private/**\" \"${PODS_ROOT}/Headers/Private/QIMCommon/**\" \"${PODS_ROOT}/Headers/Public/QIMCommon/**\" \"${PODS_ROOT}/Headers/Public/QIMCommon/**\""}
       
-      else
+    #   else
       
-      puts '---------QIMCommonSDK源码-------'
+    #   puts '---------QIMCommonSDK源码-------'
       s.public_header_files = "QIMCommon/QIMKit/**/*.{h}", "QIMCommon/QIMDB/**/*.{h}"
 
       s.source_files = "QIMCommon/Source/**/*.{h,m,c}", "QIMCommon/QIMKit/**/*.{h,m,c}", "QIMCommon/QIMDB/**/*.{h,m,mm}"
       s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'DEBUGLOG=1'}
 
-    end
+    # end
   end
 
-  if $debug
-    puts 'debug QIMCommon依赖第三方库'
-    s.dependency 'QIMOpenSSL'
-    s.default_subspecs = 'Base'
-    s.default_subspecs = 'Base', 'QIMPrivatePBCommon'
+  # if $debug
+  #   puts 'debug QIMCommon依赖第三方库'
+  #   s.dependency 'QIMOpenSSL'
+  #   s.default_subspecs = 'Base'
+  #   s.default_subspecs = 'Base', 'QIMPrivatePBCommon'
 
-  else
+  # else
   
     puts '线上release QIMPubCommon依赖第三方库'
     s.dependency 'QIMOpenSSL'
     s.dependency 'QIMKitVendor'
     s.dependency 'QIMDataBase'
     s.default_subspecs = 'Base', 'QIMPrivatePBCommon'
-  end
+  # end
   
   s.dependency 'YYCache'
   s.dependency 'YYModel'
