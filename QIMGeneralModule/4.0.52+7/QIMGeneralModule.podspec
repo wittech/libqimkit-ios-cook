@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Note' do |note|
 
-      note.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'QIMNoteEnable=1'}
+      note.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'QIMNoteEnable=0'}
       note.public_header_files = 'QIMGeneralModule/QIMNotes/**/*.{h}'
       note.source_files = ['QIMGeneralModule/QIMNotes/ARC/**/*.{h,m,c,mm}', 'QIMGeneralModule/QIMNotes/NoARC/**/*.{h,m,c,mm}']
       note.requires_arc = false
